@@ -22,3 +22,11 @@ div {
   top: 30px;
   border-style: outset;
 }
+
+section {
+  margin-top: 5%;
+}
+
+ul li {
+  list-style: square;
+}
