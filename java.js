@@ -2,7 +2,7 @@
 
 var correctA=0;
 
-
+//intro question
 let name=prompt("What's your name? : ")
 alert("Hey "+name+" Welcome to my biography page.");
 
