@@ -3,15 +3,15 @@
 var correctA=0;
 
 //intro question
-let name=prompt("What's your name? : ")
-alert("Hey "+name+" Welcome to my biography page.");
+var userName=prompt("What's your name? : ");
+alert("Hey " + userName + " Welcome to my biography page.");
 
 
-//1st Question
+//1st Question 'Asking can I ask a few questions ?'
 function firstQuestion(){
-    let firstQ=prompt(name+" Can I ask you a few questions? yes or no: ");
+    let firstQ=prompt(userName +" Can I ask you a few questions? yes or no: ");
     if (firstQ.toLowerCase()==="yes"){
-        var correctA=correctA+1;
+        correctA++;
         alert("Thanks for your time. ");
     }else if(firstQ.toLowerCase()==="no"){
         alert("I suggest you leave the page!");
@@ -19,36 +19,36 @@ function firstQuestion(){
 }
 firstQuestion();
 
-//2nd Question
+//2nd Question 'Is 'jacob' how I spell my first name'
 function secondQuestion(){
-    let secondQ=prompt("Is 'jacob' how I spell my first name: yes or no: ");
-    if (secondQ.toLowerCase()==="yes"){
+    let spellingAnswer=prompt("Is 'jacob' how I spell my first name: ");
+    if (spellingAnswer.toLowerCase()==="yes"){
         alert("No it's 'Jakob' ");
-    }else if(secondQ.toLowerCase()==="no"){
-        var correctA=correctA+1;
+    }else if(spellingAnswer.toLowerCase()==="no"){
+        correctA++;
         alert("Correct it's Jakob");
     }
 }
 secondQuestion();
 
-//3rd Question
+//3rd Question 'Did I go to College?'
 function thirdQuestion(){
     let thirdQ=prompt("Did I go to College?: yes or no: ");
     if (thirdQ.toLowerCase()==="yes"){
-        alert("Nope I didn't. Nice try " +name);
+        alert("Nope I didn't. Nice try " +userName);
     }else if(thirdQ.toLowerCase()==="no"){
-        var correctA=correctA+1;
+        correctA++;
         alert("Correct");
     }
 }
 thirdQuestion();
 
 
-//4th Question
+//4th Question 'Am I younger than 25 years old?'
 function fourthQuestion(){
     let fourthQ=prompt("Am I younger than 25 years old?: yes or no: ");
     if (fourthQ.toLowerCase()==="yes"){
-        var correctA=correctA+1;
+        correctA++;
         alert("Correct I'm 24 years old.");
     }else if(fourthQ.toLowerCase()==="no"){
         alert("Nice try but I'm 24 years old.");
@@ -56,26 +56,26 @@ function fourthQuestion(){
 }
 fourthQuestion();
 
-//5th Question
+//5th Question 'Is 'jacob' how I spell my first name?'
 function fifthQuestion(){
     let fifthQ=prompt("Just to check if your paying attention. Is 'jacob' how I spell my first name?: yes or no: ");
     if (fifthQ.toLowerCase()==="yes"){
         alert("No it's 'Jakob' ");
     }else if(fifthQ.toLowerCase()==="no"){
-        var correctA=correctA+1;
+        correctA++;
         alert("Correct it's Jakob");
     }
 
-    alert("Thanks for your time ",name);
+    alert("Thanks for your time ",userName);
 }
 fifthQuestion();
 
-//6th Question
+//6th Question '"How old do you think I am?'
 function sixthQuestion(){
     for(let i=0; i<6; i++){
         let answer=prompt("How old do you think I am?: ");
         if (answer==24){
-            var correctA=correctA+1;
+            correctA++;
             break;
         }
         else if(answer<24){
@@ -94,9 +94,9 @@ sixthQuestion();
 //7th Question
 function seventhQuestion(){
     for(let i=0; i<6; i++){
-        let answer=prompt("What is one of my favorite call of duties gmaes?");
+        let answer=prompt("What is one of my favorite call of duties games?");
         if(answer.toLowerCase()=="black ops" || answer.toLowerCase()=="modern warfare 2" || answer.toLowerCase()=="modern warfare"){
-            correctA+=1;
+            correctA++;
             break;
         }
     }
